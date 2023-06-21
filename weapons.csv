@@ -1,0 +1,15 @@
+Steel;2;Plastic;2;Tin;2;;;Fabricator;;Harpoon_Gun;1
+Steel;2;Plastic;2;;;;;Fabricator;;Stun_Gun;1
+Titanium-Aluminum_Alloy;1;Aluminum;1;Plastic;2;;;Fabricator;recipe;Advanced_Syringe_Gun;1
+Fulgurium_Chunk;1;Titanium-Aluminum_Alloy;1;Copper;1;;;Fabricator;recipe;Arc_Emitter;1
+Physicorium;2;Titanium-Aluminum_Alloy;3;Rubber;1;;;Fabricator;recipe;Assault_Rifle;1
+Ballistic_Fiber;1;Physicorium;2;Titanium-Aluminum_Alloy;2;;;Fabricator;recipe;Autoshotgun;1
+Steel;2;Rubber;2;;;;;Fabricator;recipe;Flamer;1
+Physicorium;2;Titanium-Aluminum_Alloy;3;Rubber;1;;;Fabricator;recipe;HMG;1
+Titanium-Aluminum_Alloy;3;Physicorium;1;;;;;Fabricator;recipe;Handcannon;1
+Aluminum;2;Plastic;2;Copper;2;;;Fabricator;recipe;Harpoon_Coil-Rifle;1
+FPGA_Circuit;1;Lead;2;Titanium-Aluminum_Alloy;2;Fulgurium_Chunk;2;Fabricator;recipe;Rapid_Fissile_Accelerator;1
+Steel;2;Plastic;1;;;;;Fabricator;recipe;Revolver;1
+Steel;2;Titanium-Aluminum_Alloy;2;Plastic;2;;;Fabricator;recipe;Rifle;1
+Steel;2;Titanium-Aluminum_Alloy;2;Plastic;2;;;Fabricator;recipe;Riot_Shotgun;1
+Plastic;1;Titanium-Aluminum_Alloy;2;;;;;Fabricator;recipe;SMG;1

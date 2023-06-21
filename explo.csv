@@ -1,0 +1,10 @@
+UEX;1;Plastic;1;;;;;Fabricator;;C-4_Block;1
+Iron;1;Copper;1;UEX;1;;;Fabricator;;EMP_Grenade;1
+Iron;1;UEX;1;;;;;Fabricator;;Frag_Grenade;1
+C-4_Block;1;Incendium_Crystal;1;;;;;Fabricator;;IC-4_Block;1
+Iron;1;Incendium_Crystal;1;;;;;Fabricator;;Incendium_Grenade;1
+Iron;1;Phosphorus;1;Flash_Powder;1;;;Fabricator;;Stun_Grenade;1
+Sodium;1;Phosphorus;1;;;;;Fabricator;;UEX;1
+Steel;1;Sodium;1;Phosphorus;1;;;Fabricator;;Fixfoam_Grenade;1
+Aluminium;1;Potassium;1;Sulphuric_Acid;1;;;Medical;;Compound_N;1
+Compound_N;1;Flash_Powder;1;;;;;Medical;;Volatile_Compound_N;1

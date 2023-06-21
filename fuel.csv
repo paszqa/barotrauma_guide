@@ -1,0 +1,7 @@
+Uranium;1;Steel;1;Lead;1;;;Fabricator;;Fuel_Rod;1
+Fulgurium_Chunk;1;Lead;2;Steel;1;;;Fabricator;;Fulgurium_Fuel_Rod;1
+Aluminum;2;Incendium_Crystal;1;;;;;Fabricator;;Incendium_Fuel_Tank;1
+Aluminum;2;Liquid_Oxygenite;2;;;;;Fabricator;;Oxygenite_Tank;1
+Thorium;1;Steel;1;Lead;2;;;Fabricator;;Thorium_Fuel_Rod;1
+Aluminum;2;;;;;;;Fabricator;;Oxygen_Tank;1
+Aluminum;2;Ethanol;1;;;;;Fabricator;;Welding_Fuel_Tank;1

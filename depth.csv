@@ -1,0 +1,5 @@
+Iron;2;UEX;1;;;;;Fabricator;;Depth_Charge_Shell;1
+Iron;2;Sonar_Beacon;1;;;;;Fabricator;;Depth_Decoy_Shell;1
+Iron;2;Uranium;1;IC-4_Block;1;;;Fabricator;;Nuclear_Depth_Charge;1
+Nuclear_Depth_Charge;1;Sonar_Beacon;1;;;;;Fabricator;;Nuclear_Depth_Decoy;1
+Iron;2;Fuel_Rod;1;UEX;1;;;Fabricator;;Nuclear_Depth_Charge;1

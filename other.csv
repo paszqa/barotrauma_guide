@@ -1,0 +1,12 @@
+Fulgurium_Chunk;1;FPGA_Circuit;2;Rubber;2;Silicon;2;Fabricator;;Advanced_Gene_Splicer;1
+Lead;3;Titanium;2;;;;;Fabricator;;Artifact_Transport_Case;1
+Zinc;2;Lithium;1;;;;;Fabricator;;Battery_Cell;1
+Uranium;1;Carbon;1;Salt_Vine_Seed;1;;;Fabricator;;Fertilizer;1
+Aluminum;1;Sodium;2;;;;;Fabricator;;Fire_Extinguisher;1
+Flash_Powder;2;Plastic;1;;;;;Fabricator;;Flare;12
+Plastic;1;FPGA_Circuit;2;Rubber;2;Silicon;2;Fabricator;;Gene_Splicer;1
+Phosphorus;2;Plastic;1;;;;;Fabricator;;Glowstick;4
+Tobacco_Bud;3;;;;;;;Fabricator;;Pipe_Tobacco;1
+Steel;2;;;;;;;Fabricator;;Storage_Container;1
+Fulgurium_Chunk;1;Zinc;2;;;;;Fabricator;;Fulgurium_Battery_Cell;1
+Copper;1;Silicon;1;Tin;1;;;Fabricator;;Repair_Pack;1

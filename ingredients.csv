@@ -1,0 +1,7 @@
+Magnesium;1;Potassium;2;;;;;Fabricator;;Flash_Powder;1
+FPGA_Circuit;1;Phosphorus;2;;;;;Fabricator;;Light_Component;1
+Silicon;2;Carbon;1;;;;;Fabricator;;Plastic;1
+Carbon;1;Iron;2;;;;;Fabricator;;Steel_Bar;1
+Titanium-Aluminum_Alloy;1;Plastic;2;;;;;Fabricator;;Ballistic_Fiber;1
+FPGA_Circuit;1;Plastic;1;;;;;Fabricator;;Sonar_Beacon;1
+Titanium;1;Aluminum;2;;;;;Fabricator;;Titanium-Aluminum_Alloy;1

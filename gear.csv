@@ -1,3 +1,10 @@
-2;Organic_Fiber;;;;;;;Fabricator;;1;Ballistic_Helmet
-3;Chitin_Chunk;;;;;;;Fabricator;;1;Chitin_Helmet
-2;Aluminium;1;Light_Component;;;;;Fabricator;;1;Flashlight
+Organic_Fiber;2;;;;;;;Fabricator;;Ballistic_Helmet;1
+Organic_Fiber;2;;;;;;;Fabricator;;Body_Armor;1
+Chitin_Chunk;3;;;;;;;Fabricator;;Chitin_Helmet;1
+Aluminium;2;Light_Component;1;;;;;Fabricator;;Flashlight;1
+Organic_Fiber;2;;;;;;;Fabricator;;Gunner's_Helmet;1
+Diving_Suit;1;Titanium-Aluminum_Alloy;2;Rubber;1;;;Fabricator;;Abyss_Diving_Suit;1
+Diving_Suit;1;Ballistic_Fiber;1;Titanium-Aluminum_Alloy;1;Rubber;1;Fabricator;difficult;Combat_Diving_Suit;1
+Titanium-Aluminum_Alloy;1;Rubber;1;;;;;Fabricator;difficult;Diving_Suit;1
+Combat_Diving_Suit;1;Lead;1;Physicorium_Bar;1;;;Fabricator;recipe;PUCS;1
+FPGA_Circuit;1;Plastic;1;Fulgurium_Chunk;1;;;Fabricator;recipe;Thermal_Goggles;1

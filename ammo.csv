@@ -1,0 +1,14 @@
+Iron;1;UEX;1;;;;;Fabricator;;40mm_Grenade;1
+Iron;1;Phosphorus;1;Flash_Powder;1;;;Fabricator;;40mm_Stun_Grenade;1
+Harpoon;2;UEX;1;;;;;Fabricator;;Explosive_Harpoon;2
+Steel;1;;;;;;;Fabricator;;Harpoon;6
+Physicorium;1;;;;;;;Fabricator;;Physicorium_Harpoon;6
+Steel;1;Wire;1;;;;;Fabricator;;Stun_Gun_Dart;2
+Magnesium;1;Lead;1;Titanium-Aluminum_Alloy;1;;;Fabricator;recipe;Assault_Rifle_Magazine;1
+Plastic;1;Physicorium;1;;;;;Fabricator;recipe;Explosive_Slug;1
+Magnesium;1;Lead;1;Titanium-Aluminum_Alloy;1;;;Fabricator;recipe;HMG_Magazine;1
+Magnesium;1;Lead;2;Titanium-Aluminum_Alloy;1;;;Fabricator;recipe;Handcannon_Round;1
+Magnesium;2;Lead;2;Copper;1;;;Fabricator;recipe;Revolver_Round;12
+Magnesium;2;Lead;2;Plastic;1;;;Fabricator;recipe;Rifle_Round;12
+Magnesium;1;Lead;1;Steel;1;;;Fabricator;recipe;SMG_Magazine;1
+Magnesium;2;Lead;2;Plastic;1;;;Fabricator;recipe;Shotgun_Shell;12
