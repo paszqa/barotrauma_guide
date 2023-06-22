@@ -12,6 +12,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 ### Settings
 countFont = ImageFont.truetype('kremlin.ttf',20)
+nameFont = ImageFont.truetype('kremlin.ttf',15)
 
 ####################################
 # Functions
@@ -44,27 +45,19 @@ def resize_image(image_path, max_width, max_height):
     #print("Image resized successfully.")
     
 def get_html_line_with_url(variable):
-    # Replace spaces with "_"
+    # Replace space with "_"
     variable = variable.replace(" ", "_").strip()
-    
     # Generate URL
     url = f"https://barotraumagame.com/wiki/{variable}"
-    #print("Built URL: "+url)
-    
     # Send a GET request to the URL
     response = requests.get(url, allow_redirects=True)
-    
-    
     # Get the HTML source code
     html = response.text
     # Find the line containing '<meta property="og:url"'
     for line in html.split("\n"):
         if '<meta property="og:image"' in line:
-            #print("Found image line: "+line)
             imageUrl = line.strip().split('content="')[1].replace('" />','')
-            #print("Found image URL: "+imageUrl)
             return imageUrl
-    
     return None
 
 def add_section_to_image(csv_file, startX, startY, img, imgDraw, prodDifference, prodMaxWidth):
@@ -132,6 +125,79 @@ def add_section_to_image(csv_file, startX, startY, img, imgDraw, prodDifference,
             elementIndex = elementIndex + 1     
         lineIndex = lineIndex + 1
 
+def add_section_to_minerals(csv_file, startX, startY, img, imgDraw, prodDifference, prodMaxWidth, prodMaxHeight):
+    f = open(csv_file, "r")
+    startCorner = (120,120)
+    lineIndex = 0
+    lineHeight = 86
+    for line in f:
+        print("##################")
+        elements = line.split(";")
+        elementIndex = 0
+        horizontalOffset = 0
+        currentProdName = ""
+        for element in elements:
+            print("---")
+            if elementIndex == 1 or elementIndex == 3 or elementIndex == 5:
+                if element != "" and element != " ":
+                    print("res NAME:"+element)
+                    variable = element
+                    line_with_url = get_html_line_with_url(variable)
+                    download_image(line_with_url, "image.png")
+                    objectImage = resize_image("image.png", 47, 53)
+                    currentCorner = (math.floor(startX + horizontalOffset + (47 - objectImage.width)/2), math.floor(startY + lineHeight * lineIndex + (53 - objectImage.height)/2))
+                    print(currentCorner)
+                    img.paste(objectImage, currentCorner, objectImage)
+                    objectImage.close()
+            elif elementIndex == 0:
+                currentProdName = element
+                print("PROD name: "+currentProdName)
+                horizontalOffset += 80
+                if element != "" and element != " ":
+                    variable = element
+                    line_with_url = get_html_line_with_url(variable)
+                    download_image(line_with_url, "image.png")
+                    objectImage = resize_image("image.png", prodMaxWidth, prodMaxHeight)
+                    objectImage = objectImage.convert("RGBA")
+                    currentCorner = (math.floor(startX + horizontalOffset + (47 - objectImage.width)/2), math.floor(startY + lineHeight * lineIndex + (prodMaxHeight - objectImage.height)/2) - 10)
+                    print(currentCorner)
+                    img.paste(objectImage, currentCorner, objectImage)
+                    objectImage.close()
+                    #Paste text below mineral
+                    prodNameOffsetX = math.floor(len(currentProdName)/2 * 7)
+                    textCorner = (startX + horizontalOffset - prodNameOffsetX, startY + lineHeight * lineIndex + 50)
+                    imgDraw.text(textCorner, currentProdName.upper(), font=nameFont, fill=(255,255,255))   
+                    horizontalOffset += 100
+            elif elementIndex > 6:
+                    percents = element.split(",")
+                    for chance in percents:
+                        currentCornerX = (startX + horizontalOffset)
+                        currentCornerY = (startY + lineHeight * lineIndex)
+                        #Draw dark background
+                        shape = [(currentCornerX, currentCornerY), (currentCornerX + 15, currentCornerY + 60)]
+                        imgDraw.rectangle(shape, fill ="#333", outline ="black")
+                        #Draw percent
+                        chanceNormalized = (125 - float(chance)) / 125
+                        chanceStartY = (chanceNormalized * 60)
+                        shape = [(currentCornerX, currentCornerY + chanceStartY), (currentCornerX + 15, currentCornerY + 60)]
+                        rectangleColor = (math.floor(chanceNormalized * 2.5 * 255), math.floor((1 - (chanceNormalized * 1)) * 255), 0)
+                        imgDraw.rectangle(shape, fill = rectangleColor, outline ="black")
+                        #Move to next
+                        horizontalOffset += 15
+                    horizontalOffset += 5
+            else:
+                countOffsetX = 44
+                countOffsetY = 36
+                if element != "" and element != " ":
+                    print("COUNT:"+element)
+                    textCorner = (startX + horizontalOffset + countOffsetX, startY + lineHeight * lineIndex + countOffsetY)
+                    print(textCorner)
+                    imgDraw.text(textCorner, element, font=countFont, fill=(255,255,255))    
+                horizontalOffset += 64        
+            elementIndex = elementIndex + 1     
+        lineIndex = lineIndex + 1
+
+
 def download_image(url, filename):
     #print("Getting image from: "+url)
     response = requests.get(url, stream=True)
@@ -170,5 +236,11 @@ imgDraw = ImageDraw.Draw(img,'RGBA')
 #add_section_to_image("ammo.csv", 1490, 40, img, imgDraw, -64, 47)
 
 #Output BOOSTERS
-add_section_to_image("boosters.csv", 20, 40, img, imgDraw, -64, 47)
-img.save("output_boosters.png", quality=95)
+#add_section_to_image("boosters.csv", 20, 40, img, imgDraw, -64, 47)
+
+#Output MINERALS
+add_section_to_minerals("minerals.csv", 40, 50, img, imgDraw, -64, 64, 64)
+add_section_to_minerals("minerals2.csv", 660, 50, img, imgDraw, -64, 64, 64)
+add_section_to_minerals("minerals3.csv", 1280, 50, img, imgDraw, -64, 64, 64)
+
+img.save("minerals.png", quality=95)
