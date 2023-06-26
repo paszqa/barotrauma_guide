@@ -218,29 +218,37 @@ imgDraw = ImageDraw.Draw(img,'RGBA')
 ####################################
 # Get URL of image and download it
 ####################################
+
+#Section for test output
 #variable = "Organic Fiber"
 #line_with_url = get_html_line_with_url(variable)
 #download_image(line_with_url, "image.png")
 
-#Output GEAR
+###############################################
+############ Choose an option #################
+###############################################
+
+#Option 1 - Output GEAR image
 #add_section_to_image("ingredients.csv", 20, 40, img, imgDraw, 0, 47)
 #add_section_to_image("fuel.csv", 20, 540, img, imgDraw, 0, 47)
 #add_section_to_image("gear.csv", 500, 40, img, imgDraw, 0, 47)
 #add_section_to_image("depth.csv", 500, 740, img, imgDraw, 0, 47)
 #add_section_to_image("other.csv", 970, 40, img, imgDraw, 0, 47)
+#img.save("gear.png", quality=95)
 
-#Output WEAPONS
+#Option 2 - Output WEAPONS image
 #add_section_to_image("ammobox.csv", 20, 40, img, imgDraw, 0, 47)
 #add_section_to_image("explo.csv", 530, 40, img, imgDraw, -64, 47)
 #add_section_to_image("weapons.csv", 1000, 40, img, imgDraw, 0, 63)
 #add_section_to_image("ammo.csv", 1490, 40, img, imgDraw, -64, 47)
+#img.save("weapons.png", quality=95)
 
-#Output BOOSTERS
+#Option 2 part 2 - Output BOOSTERS image (pasted on top of WEAPONS)
 #add_section_to_image("boosters.csv", 20, 40, img, imgDraw, -64, 47)
+#img.save("boosters.png", quality=95)
 
-#Output MINERALS
+#Option 3 - Output MINERALS
 add_section_to_minerals("minerals.csv", 40, 50, img, imgDraw, -64, 64, 64)
 add_section_to_minerals("minerals2.csv", 660, 50, img, imgDraw, -64, 64, 64)
 add_section_to_minerals("minerals3.csv", 1280, 50, img, imgDraw, -64, 64, 64)
-
 img.save("minerals.png", quality=95)
